@@ -2,19 +2,58 @@
 <html>
   <head>
     <title>Image Upload</title>
+    <style>
+      body {
+        background-color: #eeaa6a;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 7em; /* กำหนดขนาดฟอนต์เพิ่มขึ้นจาก 2.5em เป็น 3em */
+        margin-top: 3em;
+        margin-bottom: 2em; /* เพิ่มระยะห่างด้านล่างของหัวเรื่อง */
+      }
+      form {
+        display: inline-block;
+        margin-top: 3em;
+        border: 7px solid #050505;
+        padding: 5em;
+        border-radius: 7px;
+        background-color: #f0c05a;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        font-size: 3em;
+        margin-bottom: 5em;
+      }
+      input[type="file"] {
+        display: block;
+        margin-bottom: 3em;
+      }
+      input[type="submit"] {
+        background-color: #72e081;
+        color: #050505;
+        border: none;
+        padding: 3em 5em;
+        border-radius: 7px;
+        font-size: 3em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
   </head>
   <body>
     <h1>Image Upload</h1>
     <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="image">Choose an image to upload:</label>
       <input type="file" name="image" accept=".jpg, .jpeg, .png ">
-      <input type="submit" value="Upload">
-    </form>
-
-    <form action="/playvid" method="post" enctype="multipart/form-data">
-      
-      <label for="textbox">Enter your text:</label>
-      <input type="text" id="textbox" name="text_input" required>
-      <button type="submit">playvid</button>
+      <input type="submit" value="SUBMIT">
     </form>
   </body>
 </html>
